@@ -1,7 +1,5 @@
 library(testthat)
 
-rm(list = ls())
-
 source("confusion.R")
 
 context("Reading attributes")
@@ -10,7 +8,7 @@ test_that("factor lists", {
     predicted <- c(T, T, T, F)
     actual <- c(T, F, T, F)
     t <- table(predicted, actual)
-    expect_equal(factor_lists(t), c("predicted", "actual"))
+    expect_equal(factors_list(t), c("predicted", "actual"))
 })
 
 test_that("factor names", {
@@ -22,11 +20,11 @@ test_that("factor names", {
 
 context("Creating inputs")
 
-test_that("inputs", {
+test_that("fake inputs", {
     predicted <- c(T, T, T, F)
     actual <- c(T, F, T, F)
     t <- table(predicted, actual)
-    i <- inputs(t)
+    i <- fake_inputs(t)
     expect_equal(class(i), "list")
     expect_equal(names(i), c("predicted", "actual"))
     expect_equal(i$predicted, c(F, T, T, T))
@@ -53,10 +51,10 @@ test_that("making table", {
 
 context("round trip")
 
-test_that("table -> inputs -> table works", {
+test_that("table -> fake inputs -> table works", {
     t <- make_table(c(90, 4,
                       5, 82))
-    i <- inputs(t)
+    i <- fake_inputs(t)
     t2 <- table(i)
     expect_equal(t, t2)
 })

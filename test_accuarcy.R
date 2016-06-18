@@ -7,7 +7,7 @@ context("Binary classification")
 
 confusion_matrix <- make_table(c(264, 14,
                                  22, 158))
-test_data <- inputs(confusion_matrix)
+test_data <- fake_inputs(confusion_matrix)
 predicted <- test_data$predicted
 actual <- test_data$actual
 
