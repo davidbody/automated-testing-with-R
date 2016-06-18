@@ -25,8 +25,10 @@ test_that("we can generate data with fake_inputs", {
     data <- fake_inputs(t)
     expect_equal(class(data), "list")
     expect_equal(names(data), c("predicted", "actual"))
-    expect_equal(data$predicted, c(F, T, T, T))
-    expect_equal(data$actual, c(F, F, T, T))
+    expect_equal(sum(data$predicted), 3)
+    expect_equal(sum(data$actual), 2)
+    expect_equal(sum(data$predicted == data$actual), 3)
+    expect_equal(sum(data$predicted != data$actual), 1)
 })
 
 test_that("we can make a confusion matrix with make_table", {

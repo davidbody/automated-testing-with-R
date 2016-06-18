@@ -31,6 +31,11 @@ fake_inputs <- function(t) {
     predicted <- c(predicted, rep(as.logical(n[2]), t[2, 2]))
     actual    <- c(actual,    rep(as.logical(n[2]), t[2, 2]))
 
+    # Randomize order while keeping predicted and actual aligned
+    order     <- sample(1:length(predicted))
+    predicted <- predicted[order]
+    actual    <- actual[order]
+
     l <- list(predicted, actual)
     names(l) <- factors_list(t)
     l
