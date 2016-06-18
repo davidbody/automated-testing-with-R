@@ -3,7 +3,7 @@ library(testthat)
 source("accuracy.R")
 source("confusion.R")
 
-context("Binary classification")
+context("Accuracy measures for binary classification")
 
 confusion_matrix <- make_table(c(264, 14,
                                  22, 158))

@@ -2,38 +2,34 @@ library(testthat)
 
 source("confusion.R")
 
-context("Reading attributes")
+context("Utility functions to create fake data from confusion matrix")
 
-test_that("factor lists", {
+test_that("factors_list returns the expected list of factors", {
     predicted <- c(T, T, T, F)
     actual <- c(T, F, T, F)
     t <- table(predicted, actual)
     expect_equal(factors_list(t), c("predicted", "actual"))
 })
 
-test_that("factor names", {
+test_that("factor_names returns the expected factor names", {
     predicted <- c(T, T, T, F)
     actual <- c(T, F, T, F)
     t <- table(predicted, actual)
     expect_equal(factor_names(t), c("FALSE", "TRUE"))
 })
 
-context("Creating inputs")
-
-test_that("fake inputs", {
+test_that("we can generate data with fake_inputs", {
     predicted <- c(T, T, T, F)
     actual <- c(T, F, T, F)
     t <- table(predicted, actual)
-    i <- fake_inputs(t)
-    expect_equal(class(i), "list")
-    expect_equal(names(i), c("predicted", "actual"))
-    expect_equal(i$predicted, c(F, T, T, T))
-    expect_equal(i$actual, c(F, F, T, T))
+    data <- fake_inputs(t)
+    expect_equal(class(data), "list")
+    expect_equal(names(data), c("predicted", "actual"))
+    expect_equal(data$predicted, c(F, T, T, T))
+    expect_equal(data$actual, c(F, F, T, T))
 })
 
-context("make_table")
-
-test_that("making table", {
+test_that("we can make a confusion matrix with make_table", {
     t <- make_table(c(1, 2,
                       3, 4))
     expect_equal(class(t), "table")
@@ -49,12 +45,10 @@ test_that("making table", {
     expect_equal(dn$actual, c("FALSE", "TRUE"))
 })
 
-context("round trip")
-
-test_that("table -> fake inputs -> table works", {
-    t <- make_table(c(90, 4,
-                      5, 82))
-    i <- fake_inputs(t)
-    t2 <- table(i)
-    expect_equal(t, t2)
+test_that("round-trip table -> fake inputs -> table works", {
+    t1 <- make_table(c(90, 4,
+                       5, 82))
+    data <- fake_inputs(t1)
+    t2 <- table(data)
+    expect_equal(t1, t2)
 })
