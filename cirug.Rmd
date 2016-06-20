@@ -1,0 +1,97 @@
+---
+title: "Automated Testing with R"
+author: "David W. Body"
+date: "June 23, 2016"
+output:
+  ioslides_presentation:
+    css: cirug.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Automated Testing with R
+
+- Who am I?
+- Why are we here?
+- Ask questions any time
+
+## Automated Testing with R
+
+### Agenda
+
+- Why Test?
+- testthat package
+- Automated Testing Example
+- Available Expectations
+- Testing Pitfalls
+- TDD Workflow
+
+## Why Test?
+
+- Increased confidence that code is correct
+- Increased confidence when making changes
+- Communicate intent
+- Improve code structure
+- Increased confidence when upgrading R and/or other packages
+
+## testthat package
+
+- by Hadley Wickham
+- introduced in June 2011 R Journal article
+- "Testing should be fun, not a drag, so you do it all the time."
+
+Example:
+
+```{r echo=TRUE}
+library(testthat)
+library(stringr)
+
+context("String length")
+
+test_that("str_length is number of characters", {
+  expect_equal(str_length("a"), 1)
+  expect_equal(str_length("ab"), 2)
+  expect_equal(str_length("abc"), 3)
+})
+```
+
+## Example
+
+### Accuracy Measures for Binary Classification
+
+<div class="predicted"><p>predicted</p></div>
+<div class="confusion">
+<div class="actual"><p>actual</p></div>
+<div class="confusion-main">
+<table>
+<tr>
+<td></td>
+<td class="TF">F</td>
+<td class="TF">T</td>
+</tr>
+
+<tr>
+<td class="TF">F</td>
+<td class="cell">264<div class="cell-label">TN</div></td>
+<td class="cell">14<div class="cell-label">FP</div></td>
+</tr>
+
+<tr>
+<td class="TF">T</td>
+<td class="cell">22<div class="cell-label">FN</div></td>
+<td class="cell">158<div class="cell-label">TP</div></td>
+</tr>
+</table>
+</div>
+<div class="formulas">
+<p>accuracy = (TN + TP) / (TN + FP + FN + TP)</p>
+<p>precision = TP / (TP + FP)</p>
+<p>recall = TP / (TP + FN)</p>
+<p>sensitivity = TP / (TP + FN)</p>
+<p>specificity = TN / (TN + FP)</p>
+<p>F1 = (2 * precision * recall) / (precision + recall)</p>
+</div>
+</div>
+

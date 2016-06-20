@@ -1,0 +1,59 @@
+div.confusion {
+  display: flex;
+  color: blue;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.actual {
+  flex: 0 0 4em;
+  writing-mode: vertical-rl;
+  text-align: center;
+  margin-left: -50px;
+}
+
+.predicted {
+  color: blue;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-left: 200px;
+}
+
+.confusion-main {
+  display: flex;
+  flex: 1;
+}
+
+.confusion table {
+  border-collapse: collapse;
+}
+
+.confusion td {
+}
+
+.confusion .cell {
+  border: 1px solid black;
+  padding: 45px;
+  position: relative;
+}
+
+.confusion .TF {
+  text-align: center;
+  padding: 1em;
+}
+
+.confusion .cell-label {
+  color: green;
+  position: absolute;
+  top: 5px;
+  left: 5px;;
+}
+
+.confusion .formulas {
+  flex: 1;
+  color: green;
+  /* font-weight: normal; */
+  font-size: medium;
+  margin-left: 1em;
+  margin-top: 80px;
+}
