@@ -11,6 +11,7 @@ confusion_matrix <- make_table(c(264, 14,
 test_data <- fake_inputs(confusion_matrix)
 predicted <- test_data$predicted
 actual <- test_data$actual
+
 am <- accuracy_measures(predicted, actual)
 
 test_that("spam detection example", {
@@ -29,6 +30,7 @@ confusion_matrix <- make_table(c(9644, 23,
 test_data <- fake_inputs(confusion_matrix)
 predicted <- test_data$predicted
 actual <- test_data$actual
+
 am <- accuracy_measures(predicted, actual)
 
 test_that("credit card default example", {
