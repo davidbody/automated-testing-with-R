@@ -57,9 +57,41 @@ test_that("str_length is number of characters", {
 })
 ```
 
+## testthat expectations
+
+| Full (old style)                    | Shortcut                |
+|-------------------------------------+-------------------------|
+| expect_that(x, is_true())           | expect_true(x)          |
+| expect_that(x, is_false())          | expect_false(x)         |
+| expect_that(x, is_a(y))             | expect_is(x, y)         |
+| expect_that(x, equals(y))           | expect_equal(x, y)      |
+| expect_that(x, is_equivalent_to(y)) | expect_equivalent(x, y) |
+| expect_that(x, is_identical_to(y))  | expect_identical(x, y)  |
+| expect_that(x, matches(y))          | expect_matches(x, y)    |
+
+
+## testthat expectations, cont'd
+
+| Full (old style)                 | Shortcut             |
+|----------------------------------+----------------------|
+| expect_that(x, prints_text(y))   | expect_output(x, y)  |
+| expect_that(x, shows_message(y)) | expect_message(x, y) |
+| expect_that(x, gives_warning(y)) | expect_warning(x, y) |
+| expect_that(x, throws_error(y))  | expect_error(x, y)   |
+
+
+## All testhtat expectations
+
+```{r, echo=TRUE}
+match_expect <- function(name) { startsWith(name, "expect_") }
+Filter(match_expect, ls("package:testthat"))
+```
+
 ## Example
 
-### Accuracy Measures for Binary Classification
+Accuracy Measures for Binary Classification
+
+Identifying spam email
 
 <div class="predicted"><p>predicted</p></div>
 <div class="confusion">
@@ -87,9 +119,14 @@ test_that("str_length is number of characters", {
 </div>
 </div>
 
+Zumel & Mount, Practical Data Science with R, p. 93.
+
+
 ## Example
 
-### Accuracy Measures for Binary Classification
+Accuracy Measures for Binary Classification
+
+Identifying spam email
 
 <div class="predicted"><p>predicted</p></div>
 <div class="confusion">
@@ -119,7 +156,9 @@ test_that("str_length is number of characters", {
 
 ## Example
 
-### Accuracy Measures for Binary Classification
+Accuracy Measures for Binary Classification
+
+Identifying spam email
 
 <div class="predicted"><p>predicted</p></div>
 <div class="confusion">
@@ -152,7 +191,9 @@ test_that("str_length is number of characters", {
 
 ## Example
 
-### Accuracy Measures for Binary Classification
+Accuracy Measures for Binary Classification
+
+Identifying spam email
 
 <div class="predicted"><p>predicted</p></div>
 <div class="confusion">

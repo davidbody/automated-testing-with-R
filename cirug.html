@@ -146,9 +146,94 @@ test_that(&quot;str_length is number of characters&quot;, {
   expect_equal(str_length(&quot;abc&quot;), 3)
 })</pre>
 
+</article></slide><slide class=''><hgroup><h2>testthat expectations</h2></hgroup><article  id="testthat-expectations">
+
+<table class = 'rmdtable'>
+<tr class="header">
+<th align="left">Full (old style)</th>
+<th align="left">Shortcut</th>
+</tr>
+<tr class="odd">
+<td align="left">expect_that(x, is_true())</td>
+<td align="left">expect_true(x)</td>
+</tr>
+<tr class="even">
+<td align="left">expect_that(x, is_false())</td>
+<td align="left">expect_false(x)</td>
+</tr>
+<tr class="odd">
+<td align="left">expect_that(x, is_a(y))</td>
+<td align="left">expect_is(x, y)</td>
+</tr>
+<tr class="even">
+<td align="left">expect_that(x, equals(y))</td>
+<td align="left">expect_equal(x, y)</td>
+</tr>
+<tr class="odd">
+<td align="left">expect_that(x, is_equivalent_to(y))</td>
+<td align="left">expect_equivalent(x, y)</td>
+</tr>
+<tr class="even">
+<td align="left">expect_that(x, is_identical_to(y))</td>
+<td align="left">expect_identical(x, y)</td>
+</tr>
+<tr class="odd">
+<td align="left">expect_that(x, matches(y))</td>
+<td align="left">expect_matches(x, y)</td>
+</tr>
+</table>
+
+</article></slide><slide class=''><hgroup><h2>testthat expectations, cont&#39;d</h2></hgroup><article  id="testthat-expectations-contd">
+
+<table class = 'rmdtable'>
+<tr class="header">
+<th align="left">Full (old style)</th>
+<th align="left">Shortcut</th>
+</tr>
+<tr class="odd">
+<td align="left">expect_that(x, prints_text(y))</td>
+<td align="left">expect_output(x, y)</td>
+</tr>
+<tr class="even">
+<td align="left">expect_that(x, shows_message(y))</td>
+<td align="left">expect_message(x, y)</td>
+</tr>
+<tr class="odd">
+<td align="left">expect_that(x, gives_warning(y))</td>
+<td align="left">expect_warning(x, y)</td>
+</tr>
+<tr class="even">
+<td align="left">expect_that(x, throws_error(y))</td>
+<td align="left">expect_error(x, y)</td>
+</tr>
+</table>
+
+</article></slide><slide class=''><hgroup><h2>All testhtat expectations</h2></hgroup><article  id="all-testhtat-expectations">
+
+<pre class = 'prettyprint lang-r'>match_expect &lt;- function(name) { startsWith(name, &quot;expect_&quot;) }
+Filter(match_expect, ls(&quot;package:testthat&quot;))</pre>
+
+<pre >##  [1] &quot;expect_cpp_tests_pass&quot;     &quot;expect_equal&quot;             
+##  [3] &quot;expect_equal_to_reference&quot; &quot;expect_equivalent&quot;        
+##  [5] &quot;expect_error&quot;              &quot;expect_failure&quot;           
+##  [7] &quot;expect_false&quot;              &quot;expect_gt&quot;                
+##  [9] &quot;expect_gte&quot;                &quot;expect_identical&quot;         
+## [11] &quot;expect_is&quot;                 &quot;expect_length&quot;            
+## [13] &quot;expect_less_than&quot;          &quot;expect_lt&quot;                
+## [15] &quot;expect_lte&quot;                &quot;expect_match&quot;             
+## [17] &quot;expect_message&quot;            &quot;expect_more_than&quot;         
+## [19] &quot;expect_named&quot;              &quot;expect_null&quot;              
+## [21] &quot;expect_output&quot;             &quot;expect_output_file&quot;       
+## [23] &quot;expect_s3_class&quot;           &quot;expect_s4_class&quot;          
+## [25] &quot;expect_silent&quot;             &quot;expect_success&quot;           
+## [27] &quot;expect_that&quot;               &quot;expect_true&quot;              
+## [29] &quot;expect_type&quot;               &quot;expect_warning&quot;</pre>
+
 </article></slide><slide class=''><hgroup><h2>Example</h2></hgroup><article  id="example">
 
-<h3>Accuracy Measures for Binary Classification</h3>
+<p>Accuracy Measures for Binary Classification</p>
+
+<p>Identifying spam email</p>
 
 <div class="predicted">
 <p>
@@ -234,9 +319,13 @@ T
 
 </table></div></div>
 
+<p>Zumel &amp; Mount, Practical Data Science with R, p. 93.</p>
+
 </article></slide><slide class=''><hgroup><h2>Example</h2></hgroup><article  id="example-1">
 
-<h3>Accuracy Measures for Binary Classification</h3>
+<p>Accuracy Measures for Binary Classification</p>
+
+<p>Identifying spam email</p>
 
 <div class="predicted">
 <p>
@@ -336,7 +425,9 @@ TP</div>
 
 </article></slide><slide class=''><hgroup><h2>Example</h2></hgroup><article  id="example-2">
 
-<h3>Accuracy Measures for Binary Classification</h3>
+<p>Accuracy Measures for Binary Classification</p>
+
+<p>Identifying spam email</p>
 
 <div class="predicted">
 <p>
@@ -443,7 +534,9 @@ accuracy = (TN + TP) / (TN + FP + FN + TP)
 
 </article></slide><slide class=''><hgroup><h2>Example</h2></hgroup><article  id="example-3">
 
-<h3>Accuracy Measures for Binary Classification</h3>
+<p>Accuracy Measures for Binary Classification</p>
+
+<p>Identifying spam email</p>
 
 <div class="predicted">
 <p>
