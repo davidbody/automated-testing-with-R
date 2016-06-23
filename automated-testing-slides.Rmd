@@ -45,6 +45,7 @@ From Wikipedia:
 - Communicate intent
 - Signal code quality
 - Improve code structure
+- Find a bug => write a failing test => fix bug
 - Increased confidence when upgrading R and/or other packages
 
 ## testthat package
@@ -261,6 +262,7 @@ Supporting code for tests
 * Controlled reproducible environment
     + setup
     + teardown
+* Tests can make code harder to change
 * Don't trust a test you haven't seen fail at least once
     + Make sure tests pass and fail for the right reasons
 * Don't choose examples that allow for easy mistakes
