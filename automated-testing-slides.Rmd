@@ -1,10 +1,10 @@
 ---
 title: "Automated Testing with R"
-author: "David W. Body"
+author: "David W. Body / @david_body"
 date: "June 23, 2016"
 output:
   ioslides_presentation:
-    css: cirug.css
+    css: automated-testing-slides.css
 ---
 
 ```{r setup, include=FALSE}
@@ -87,7 +87,9 @@ match_expect <- function(name) { startsWith(name, "expect_") }
 Filter(match_expect, ls("package:testthat"))
 ```
 
-## Example
+## Live coding example
+
+## More detailed example
 
 Accuracy Measures for Binary Classification
 
@@ -122,7 +124,7 @@ Identifying spam email
 Zumel & Mount, Practical Data Science with R, p. 93.
 
 
-## Example
+## More detailed example
 
 Accuracy Measures for Binary Classification
 
@@ -154,7 +156,7 @@ Identifying spam email
 </div>
 </div>
 
-## Example
+## More detailed example
 
 Accuracy Measures for Binary Classification
 
@@ -189,7 +191,7 @@ Identifying spam email
 </div>
 </div>
 
-## Example
+## More detailed example
 
 Accuracy Measures for Binary Classification
 
@@ -229,3 +231,36 @@ Identifying spam email
 </div>
 </div>
 
+
+## Code for more detailed example
+
+Main code
+
+- accuracy.R
+- test_accuracy.R
+
+Supporting code for tests
+
+- confusion.R
+- test_confusion.R
+
+
+## Some automated testing pitfalls
+
+* Controlled reproducible environment
+    + setup
+    + teardown
+* Don't trust a test you haven't seen fail at least once
+    + Make sure tests fail for the right reasons
+* Don't choose examples that allow for easy mistakes
+    + multiple identical values
+    + needlessly symetrical matrices
+    + etc
+* Non-deterministic tests can create headaches
+
+## TDD
+
+* Test-driven development
+* Example of TDD workflow (if time permits)
+
+## Questions?

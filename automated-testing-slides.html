@@ -36,7 +36,7 @@
       // Author information
       presenters: [
             {
-        name:  'David W. Body' ,
+        name:  'David W. Body / <span class="citation">@david_body</span>' ,
         company: '',
         gplus: '',
         twitter: '',
@@ -229,7 +229,9 @@ Filter(match_expect, ls(&quot;package:testthat&quot;))</pre>
 ## [27] &quot;expect_that&quot;               &quot;expect_true&quot;              
 ## [29] &quot;expect_type&quot;               &quot;expect_warning&quot;</pre>
 
-</article></slide><slide class=''><hgroup><h2>Example</h2></hgroup><article  id="example">
+</article></slide><slide class=''><hgroup><h2>Live coding example</h2></hgroup><article  id="live-coding-example">
+
+</article></slide><slide class=''><hgroup><h2>More detailed example</h2></hgroup><article  id="more-detailed-example">
 
 <p>Accuracy Measures for Binary Classification</p>
 
@@ -321,7 +323,7 @@ T
 
 <p>Zumel &amp; Mount, Practical Data Science with R, p. 93.</p>
 
-</article></slide><slide class=''><hgroup><h2>Example</h2></hgroup><article  id="example-1">
+</article></slide><slide class=''><hgroup><h2>More detailed example</h2></hgroup><article  id="more-detailed-example-1">
 
 <p>Accuracy Measures for Binary Classification</p>
 
@@ -423,7 +425,7 @@ TP</div>
 
 </table></div></div>
 
-</article></slide><slide class=''><hgroup><h2>Example</h2></hgroup><article  id="example-2">
+</article></slide><slide class=''><hgroup><h2>More detailed example</h2></hgroup><article  id="more-detailed-example-2">
 
 <p>Accuracy Measures for Binary Classification</p>
 
@@ -532,7 +534,7 @@ accuracy = (TN + TP) / (TN + FP + FN + TP)
 
 </p></div></div>
 
-</article></slide><slide class=''><hgroup><h2>Example</h2></hgroup><article  id="example-3">
+</article></slide><slide class=''><hgroup><h2>More detailed example</h2></hgroup><article  id="more-detailed-example-3">
 
 <p>Accuracy Measures for Binary Classification</p>
 
@@ -669,7 +671,56 @@ specificity = TN / (TN + FP)
 
 F1 = (2 * precision * recall) / (precision + recall)
 
-</p></div></div></article></slide>
+</p></div></div>
+
+</article></slide><slide class=''><hgroup><h2>Code for more detailed example</h2></hgroup><article  id="code-for-more-detailed-example">
+
+<p>Main code</p>
+
+<ul>
+<li>accuracy.R</li>
+<li>test_accuracy.R</li>
+</ul>
+
+<p>Supporting code for tests</p>
+
+<ul>
+<li>confusion.R</li>
+<li>test_confusion.R</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Some automated testing pitfalls</h2></hgroup><article  id="some-automated-testing-pitfalls">
+
+<ul>
+<li>Controlled reproducible environment
+
+<ul>
+<li>setup</li>
+<li>teardown</li>
+</ul></li>
+<li>Don&#39;t trust a test you haven&#39;t seen fail at least once
+
+<ul>
+<li>Make sure tests fail for the right reasons</li>
+</ul></li>
+<li>Don&#39;t choose examples that allow for easy mistakes
+
+<ul>
+<li>multiple identical values</li>
+<li>needlessly symetrical matrices</li>
+<li>etc</li>
+</ul></li>
+<li>Non-deterministic tests can create headaches</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>TDD</h2></hgroup><article  id="tdd">
+
+<ul>
+<li>Test-driven development</li>
+<li>Example of TDD workflow (if time permits)</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Questions?</h2></hgroup><article  id="questions"></article></slide>
 
 
   <slide class="backdrop"></slide>
