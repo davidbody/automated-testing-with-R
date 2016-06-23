@@ -258,10 +258,19 @@ Supporting code for tests
     + etc
 * Non-deterministic tests can create headaches
 
+
 ## TDD
 
 * Test-driven development
 * Example of TDD workflow (if time permits)
+
+
+## Resources
+
+Wickham, Hadley (2011). testthat: Get Started with Testing. The R Journal 3/1 5-10. http://journal.r-project.org/archive/2011-1/RJournal_2011-1_Wickham.pdf
+
+Wickham, Hadley (2015). R Packages, Testing chapter. http://r-pkgs.had.co.nz/tests.html
+
 
 ## Questions?
 
