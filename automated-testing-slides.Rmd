@@ -26,7 +26,7 @@ knitr::opts_chunk$set(echo = FALSE)
 - Automated Testing Example
 - Available Expectations
 - Testing Pitfalls
-- TDD Workflow
+- TDD Workflow (if time permits)
 
 ## Why Test?
 
