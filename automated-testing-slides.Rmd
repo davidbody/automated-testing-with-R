@@ -27,11 +27,23 @@ knitr::opts_chunk$set(echo = FALSE)
 - Automated Testing Pitfalls
 - TDD Workflow (if time permits)
 
+## What is automated testing?
+
+From Wikipedia:
+
+> In software testing, test automation is the use of special software
+> (separate from the software being tested) to control the execution
+> of tests and the _comparison of **actual outcomes** with **predicted
+> outcomes**_.
+
+(emphasis added)
+
 ## Why Test?
 
 - Increased confidence that code is correct
 - Increased confidence when making changes
 - Communicate intent
+- Signal code quality
 - Improve code structure
 - Increased confidence when upgrading R and/or other packages
 
@@ -66,7 +78,7 @@ test_that("str_length is number of characters", {
 | expect_that(x, equals(y))           | expect_equal(x, y)      |
 | expect_that(x, is_equivalent_to(y)) | expect_equivalent(x, y) |
 | expect_that(x, is_identical_to(y))  | expect_identical(x, y)  |
-| expect_that(x, matches(y))          | expect_matches(x, y)    |
+| expect_that(x, match(y))            | expect_match(x, y)      |
 
 
 ## testthat expectations, cont'd
@@ -250,7 +262,7 @@ Supporting code for tests
     + setup
     + teardown
 * Don't trust a test you haven't seen fail at least once
-    + Make sure tests fail for the right reasons
+    + Make sure tests pass and fail for the right reasons
 * Don't choose examples that allow for easy mistakes
     + multiple identical values
     + needlessly symetrical matrices
