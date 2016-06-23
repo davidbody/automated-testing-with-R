@@ -264,3 +264,9 @@ Supporting code for tests
 * Example of TDD workflow (if time permits)
 
 ## Questions?
+
+David W. Body / Big Creek Software, LLC
+
+Twitter: [\@david_body](https://twitter.com/david_body)
+
+[www.bigcreek.com](https://www.bigcreek.com/)
