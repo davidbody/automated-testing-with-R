@@ -282,6 +282,8 @@ Wickham, Hadley (2011). testthat: Get Started with Testing. The R Journal 3/1 5-
 
 Wickham, Hadley (2015). R Packages, Testing chapter. http://r-pkgs.had.co.nz/tests.html
 
+Code examples and slides: https://github.com/davidbody/automated-testing-with-R
+
 
 ## Questions?
 
