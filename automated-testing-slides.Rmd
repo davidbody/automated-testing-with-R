@@ -277,6 +277,7 @@ Supporting code for tests
 * Test-driven development
 * Example of TDD workflow (if time permits)
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;Test driven development is double entry bookkeeping.&quot; -- <a href="https://twitter.com/unclebobmartin">@unclebobmartin</a></p>&mdash; Computer Science (@CompSciFact) <a href="https://twitter.com/CompSciFact/status/746090249055506432">June 23, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Resources
 
