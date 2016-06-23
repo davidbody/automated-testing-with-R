@@ -23,9 +23,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - Why Test?
 - testthat package
-- Automated Testing Example
-- Available Expectations
-- Testing Pitfalls
+- Automated Testing Examples
+- Automated Testing Pitfalls
 - TDD Workflow (if time permits)
 
 ## Why Test?
