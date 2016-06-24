@@ -24,7 +24,7 @@ test_that("spam detection example", {
     expect_equal(am$F1, 0.897727273)
 })
 
-## Example from An Introduction to Stastical Learning, p. 145
+## Example from An Introduction to Statistical Learning, p. 145
 confusion_matrix <- make_table(c(9644, 23,
                                  252, 81))
 test_data <- fake_inputs(confusion_matrix)
